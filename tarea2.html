@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<title>Votar</title>
+</head>
+<body>
+	<section>
+		<form action="#" method="post" name="formu">
+			<h1>Elige región</h1>
+			<select name="votacion">
+				<option value="N">Norte</option>
+				<option value="S">Sur</option>
+				<option value="C">Centro</option>
+			</select>
+			<input type="button" onclick="voto();" value="Voto" >
+		</form>
+		<article id="eleccion"></article>
+	</section>
+	<script type="text/javascript">
+		function voto(){
+			switch (document.formu.votacion.value) {
+				case "N":
+				document.getElementById("eleccion").innerHTML="Voto emitido desde el Norte";break;
+				case "S":
+				document.getElementById("eleccion").innerHTML="Voto emitido desde el Sur";break;
+				case "C":
+				document.getElementById("eleccion").innerHTML="Voto emitido desde el Centro";break;
+
+			}
+		}
+	</script>
+
+</body>
+</html>

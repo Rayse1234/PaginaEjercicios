@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Factorial</title>
+</head>
+<body >
+	<section>
+		<p id="total"></p>
+	</section>
+		
+	<script type="text/javascript">
+		var i=prompt("Ingrese numero para factorial");
+		var r=1;
+
+		while(i !=0)
+            {
+                var r = r * i;
+                i--;
+                document.getElementById("total").innerHTML="el factorial es "+r;
+            }
+		
+
+</script>
+</body>
+</html>
