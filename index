@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Índice</title>
+  <link href="CSS\estilos.css" rel="stylesheet" type="text/css"/>
+  
+</head>
+<body>
+	<section id="menu1">
+<nav id="menu">
+<ul>
+<li><a href="tarea1.html">Tarea 1</a></li>
+<li><a href="tarea2.html">Tarea 2</a></li>
+<li><a href="tarea3.html">Tarea 3</a></li>
+<li><a href="Ejercicio8.html">Ejercicio 8</a></li>
+<li><a href="Ejercicio10.html">Ejercicio 10</a></li>
+</ul>
+<nav>
+	</section>
+
+	<section id="indice">
+		<h1>Índice</h1>
+					<h3>Ejercicios de tarea</h3>
+<ul>
+<li><a href="index.html">Creación de articles</a></li>
+<li><a href="pagina1.html">Formulario de votación</a></li>
+<li><a href="pagina2.html">Suma de números positivos</a></li>
+</ul>
+<h3>ejercicios en clase</h3>
+<ul>
+<li><a href="index.html">Operaciones</a></li>
+<li><a href="pagina1.html">Factorial</a></li>
+</ul>
+	</section>
+
+
+
+
+
+	
+<footer>
+	<nav id="croc">
+<section style="width: 50%; height: 50px">
+<h4>Datos</h4>
+<p>Luis Gustavo Eheveste Ramírez</p>
+<p>Grupo: EVN 302</p>
+<p>Creación: Viernes 06-12-20 </p>
+<p>Teléfono 477-474-6463</p>
+</section>
+<section style="width: 50%; height: 100px; margin-left: 50%">
+<a href="https://www.facebook.com/luisgustavo.ramirez.98"><img src="images/gus.jpg" style="width:100px; height: 100px;"> </a>
+</section>
+</nav>
+</footer>
+</body>
+
+</html>
