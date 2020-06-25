@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Agregar nodos</title>
+</head>
+<body>
+	<section id="contenedor">
+		<ul id="lista">
+			<li>Opcion1</li>
+			<li>Opcion2</li>
+			<li>Opcion3</li>
+		</ul>
+		<button type="button" onclick="agregar();">Agregar Elemento</button>
+	</section>
+	<script type="text/javascript">
+		var i=4;
+		function agregar()
+		{
+		
+			
+			var elemento=document.createElement("li");
+			var texto=document.createTextNode("Opcion "+i);
+			elemento.appendChild(texto);
+			var lista=document.getElementById("lista");
+			lista.appendChild(elemento);
+			i=i+1;
+			return i;
+		
+		}
+	</script>
+</body>
+</html>

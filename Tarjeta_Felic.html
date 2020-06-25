@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Tarjeta de Felicitación</title>
+</head>
+<body>
+
+	<section>
+	<section>
+
+		<h1 style="text-align: center;">Crea tu tarjeta de Felicitación</h1>
+		<audio autoplay src="music/1.mp3" controls></audio> 
+		<!--Tipo-->
+	</section>
+	<section>
+		<h4>Elige un tema</h4>
+		<form id="formu1">
+			<input type="radio" name="T" id="SV"  >
+			<label>San Valentín</label> 
+			<input type="radio" name="T"  id="FC" >
+			<label>Felíz Cumple</label>
+			<input type="radio" name="T" id="M" >
+			<label>Motivación</label>
+		</form>
+	</section>
+	<!--Imagen-->
+	<section>
+		<form id="formu2">
+			<h4>Elige una imagen</h4>
+			<input type="radio" name="a" id="i1" >
+			<img src="https://image.freepik.com/vector-gratis/feliz-cumpleanos-concepto_23-2148484501.jpg" width="200px" height="200px">	
+
+			<input type="radio" name="a" id="i2">
+			<img src="https://i.pinimg.com/originals/f6/be/fe/f6befe22e7ad7594880ad2ac2878f46c.jpg" width="200px" height="200px">
+
+			<input type="radio" name="a" id="i3">
+			<img src="https://www.creativefabrica.com/wp-content/uploads/2017/02/Believe-in-yourself.jpg" width="200px" height="200px">
+		</form>
+	</section>
+	<!--Info-->
+	<section>
+		<form id="formu3">
+			<h4>Info de la tarjeta</h4>
+			<label>Título:</label>
+			<input type="text" id="tit" name="tit" value="Ingresa título"><br>
+			<br>
+			<label>Subtítulo:</label>
+			<input type="text" id="sub" name="sub" value="Ingresa subtítulo"><br>
+			<br>
+			<label>Destinatario:</label>
+			<input type="text" id="des" name="des" value="Ingresa destinatario"><br>
+			<br>	
+			<label>Mensaje:</label>
+			<input type="text" id="men" name="men" value="Cuerpo del mensaje" ><br>
+			<br>	
+		  <input type="reset">
+		</form>
+		<section>
+			<h4>Color</h4>
+			<label>Selecciona el color de fondo:</label><br>
+			<input type="color" name="color" id="color"> <br>
+			<h4>Generar carta con las condiciones propuestas</h4>
+			<div style="text-align: center;">
+			<input type="button" value="Generar" onclick="generar();">
+			</div>
+		</section>
+	</section>
+	</section>
+
+	<article id="final">
+
+
+		
+	</article>
+
+	<script type="text/javascript">
+
+		function generar(){
+			var T,S,A,P,F,Au,D;
+		Titl=document.getElementById("tit").value;
+		Stl=document.getElementById("sub").value;
+		Ms=document.getElementById("men").value;
+		Des=document.getElementById("des").value;
+		F=document.getElementById("color").value;
+		Q=prompt("Ingresa tu nombre");
+		D=new Date();
+
+
+		//1
+		if(document.getElementById("SV").checked == true){
+			
+			if(document.getElementById("i1").checked == true){
+				
+
+		document.write('<article style="font-family: MuseoModerno; color: green; background-color:'+F+'">'+
+	'<h1 style="font-size: 18px; text-align: center;">'+Titl+'</h1><br>'+
+	'<h1 style="font-size: 12px; text-align: center;">'+Stl+'</h1><br>'+
+	'<section style="text-align: center;">'+'<img src="https://image.freepik.com/vector-gratis/feliz-cumpleanos-concepto_23-2148484501.jpg" width="60%" height="60%">'+'</section>'+
+	'<section><p style="font-size: 20px; text-align: center;">'+Ms+'</p>'+'</section><br>'+
+	'<p style="font-size: 20px; text-align: center;">'+'Con cariño para:'+Des+'</p><br><br>'+
+	'<h3 style="float:left;">'+D+'</h3>'+
+	'<h3 style="float:right;">'+Q+'</h3>'+
+	'</article>');
+		document.body.style.backgroundColor=F;
+}
+	else if(document.getElementById("i2").checked == true){
+
+		document.write('<article style="font-family: Piedra; color: orange; background-color:'+F+'">'+
+	'<h1 style="font-size: 18px; text-align: center;">'+Titl+'</h1><br>'+
+	'<h1 style="font-size: 12px; text-align: center;">'+Stl+'</h1><br>'+
+	'<section style="text-align: center;">'+'<img src="https://i.pinimg.com/originals/f6/be/fe/f6befe22e7ad7594880ad2ac2878f46c.jpg" width="60%" height="60%">'+'</section>'+
+	'<section><p style="font-size: 20px; text-align: center;">'+Ms+'</p>'+'</section><br>'+
+	'<p style="font-size: 20px; text-align: center;">'+'Con cariño para:'+Des+'</p><br><br>'+
+	'<h3 style="float:left;">'+D+'</h3>'+
+	'<h3 style="float:right;">'+Q+'</h3>'+
+	'</article>');
+		document.body.style.backgroundColor=F;
+}
+else if(document.getElementById("i3").checked == true){
+
+		document.write('<article style="font-family: Roboto; color: gray; background-color:'+F+'">'+
+	'<h1 style="font-size: 18px; text-align: center;">'+Titl+'</h1><br>'+
+	'<h1 style="font-size: 12px; text-align: center;">'+Stl+'</h1><br>'+
+	'<section style="text-align: center;">'+'<img src="https://www.creativefabrica.com/wp-content/uploads/2017/02/Believe-in-yourself.jpg" width="60%" height="60%">'+'</section>'+
+	'<section><p style="font-size: 20px; text-align: center;">'+Ms+'</p>'+'</section><br>'+
+	'<p style="font-size: 20px; text-align: center;">'+'Con cariño para:'+Des+'</p><br><br>'+
+	'<h3 style="float:left;">'+D+'</h3>'+
+	'<h3 style="float:right;">'+Q+'</h3>'+
+	'</article>');
+		document.body.style.backgroundColor=F;
+}
+
+	}
+	//2
+	else if(document.getElementById("FC").checked == true){
+			if(document.getElementById("i1").checked == true){
+				
+
+		document.write('<article style="font-family: MuseoModerno; color: green; background-color:'+F+'">'+
+	'<h1 style="font-size: 18px; text-align: center;">'+Titl+'</h1><br>'+
+	'<h1 style="font-size: 12px; text-align: center;">'+Stl+'</h1><br>'+
+	'<section style="text-align: center;">'+'<img src="https://image.freepik.com/vector-gratis/feliz-cumpleanos-concepto_23-2148484501.jpg" width="60%" height="60%">'+'</section>'+
+	'<section><p style="font-size: 20px; text-align: center;">'+Ms+'</p>'+'</section><br>'+
+	'<p style="font-size: 20px; text-align: center;">'+'Con cariño para:'+Des+'</p><br><br>'+
+	'<h3 style="float:left;">'+D+'</h3>'+
+	'<h3 style="float:right;">'+Q+'</h3>'+
+	'</article>');
+		document.body.style.backgroundColor=F;
+}
+	else if(document.getElementById("i2").checked == true){
+
+		document.write('<article style="font-family: Piedra; color: orange; background-color:'+F+'">'+
+	'<h1 style="font-size: 18px; text-align: center;">'+Titl+'</h1><br>'+
+	'<h1 style="font-size: 12px; text-align: center;">'+Stl+'</h1><br>'+
+	'<section style="text-align: center;">'+'<img src="https://i.pinimg.com/originals/f6/be/fe/f6befe22e7ad7594880ad2ac2878f46c.jpg" width="60%" height="60%">'+'</section>'+
+	'<section><p style="font-size: 20px; text-align: center;">'+Ms+'</p>'+'</section><br>'+
+	'<p style="font-size: 20px; text-align: center;">'+'Con cariño para:'+Des+'</p><br><br>'+
+	'<h3 style="float:left;">'+D+'</h3>'+
+	'<h3 style="float:right;">'+Q+'</h3>'+
+	'</article>');
+		document.body.style.backgroundColor=F;
+}
+else if(document.getElementById("i3").checked == true){
+
+		document.write('<article style="font-family: Roboto; color: gray; background-color:'+F+'">'+
+	'<h1 style="font-size: 18px; text-align: center;">'+Titl+'</h1><br>'+
+	'<h1 style="font-size: 12px; text-align: center;">'+Stl+'</h1><br>'+
+	'<section style="text-align: center;">'+'<img src="https://www.creativefabrica.com/wp-content/uploads/2017/02/Believe-in-yourself.jpg" width="60%" height="60%">'+'</section>'+
+	'<section><p style="font-size: 20px; text-align: center;">'+Ms+'</p>'+'</section><br>'+
+	'<p style="font-size: 20px; text-align: center;">'+'Con cariño para:'+Des+'</p><br><br>'+
+	'<h3 style="float:left;">'+D+'</h3>'+
+	'<h3 style="float:right;">'+Q+'</h3>'+
+	'</article>');
+		document.body.style.backgroundColor=F;
+}
+
+	}
+//3
+	else if(document.getElementById("M").checked == true){
+			if(document.getElementById("i1").checked == true){
+				
+
+		document.write('<article style="font-family: MuseoModerno; color: green; background-color:'+F+'">'+
+	'<h1 style="font-size: 18px; text-align: center;">'+Titl+'</h1><br>'+
+	'<h1 style="font-size: 12px; text-align: center;">'+Stl+'</h1><br>'+
+	'<section style="text-align: center;">'+'<img src="https://image.freepik.com/vector-gratis/feliz-cumpleanos-concepto_23-2148484501.jpg" width="60%" height="60%">'+'</section>'+
+	'<section><p style="font-size: 20px; text-align: center;">'+Ms+'</p>'+'</section><br>'+
+	'<p style="font-size: 20px; text-align: center;">'+'Con cariño para:'+Des+'</p><br><br>'+
+	'<h3 style="float:left;">'+D+'</h3>'+
+	'<h3 style="float:right;">'+Q+'</h3>'+
+	'</article>');
+		document.body.style.backgroundColor=F;
+}
+	else if(document.getElementById("i2").checked == true){
+
+		document.write('<article style="font-family: Piedra; color: orange; background-color:'+F+'">'+
+	'<h1 style="font-size: 18px; text-align: center;">'+Titl+'</h1><br>'+
+	'<h1 style="font-size: 12px; text-align: center;">'+Stl+'</h1><br>'+
+	'<section style="text-align: center;">'+'<img src="https://i.pinimg.com/originals/f6/be/fe/f6befe22e7ad7594880ad2ac2878f46c.jpg" width="60%" height="60%">'+'</section>'+
+	'<section><p style="font-size: 20px; text-align: center;">'+Ms+'</p>'+'</section><br>'+
+	'<p style="font-size: 20px; text-align: center;">'+'Con cariño para:'+Des+'</p><br><br>'+
+	'<h3 style="float:left;">'+D+'</h3>'+
+	'<h3 style="float:right;">'+Q+'</h3>'+
+	'</article>');
+		document.body.style.backgroundColor=F;
+}
+else if(document.getElementById("i3").checked == true){
+
+		document.write('<article style="font-family: Roboto; color: gray; background-color:'+F+'">'+
+	'<h1 style="font-size: 18px; text-align: center;">'+Titl+'</h1><br>'+
+	'<h1 style="font-size: 12px; text-align: center;">'+Stl+'</h1><br>'+
+	'<section style="text-align: center;">'+'<img src="https://www.creativefabrica.com/wp-content/uploads/2017/02/Believe-in-yourself.jpg" width="60%" height="60%">'+'</section>'+
+	'<section><p style="font-size: 20px; text-align: center;">'+Ms+'</p>'+'</section><br>'+
+	'<p style="font-size: 20px; text-align: center;">'+'Con cariño para:'+Des+'</p><br><br>'+
+	'<h3 style="float:left;">'+D+'</h3>'+
+	'<h3 style="float:right;">'+Q+'</h3>'+
+	'</article>');
+		document.body.style.backgroundColor=F;
+}
+
+	
+}
+}
+	</script>
+</body>
+</html>

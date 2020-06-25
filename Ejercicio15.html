@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Dom5 Bordes</title>
+</head>
+<body>
+	<section>
+		<figure>
+			<img src="images/1.jpg" id="imagen" style="border:5px solid #f97657" title="prueba de bordes" width="300"; height="200">
+		</figure>
+	</section>
+	<form name="formu">
+		<input type="button" value="Ancho de 20px" onclick="setBorderWidth(20);">
+		<input type="button" value="Ancho de 50px" onclick="setBorderWidth(50);">
+		<select name="tipo" id="xd">
+			<option value="double">Doble</option>
+			<option value="dotted">Punteado</option>
+			<option value="dashed">Guiones</option>
+		</select>
+		<input type="color" name="color" id="cambio" >
+	</form>
+	<script type="text/javascript">
+		function setBorderWidth(ancho)
+		{
+			document.getElementById("imagen").style.borderWidth=ancho+"px";
+			var c=document.getElementById("cambio").value;
+			document.getElementById("imagen").style.borderColor=c;
+			var m=document.getElementById("xd").value;
+			document.getElementById("imagen").style.borderStyle=m;
+		}
+	</script>
+</body>
+</html>
